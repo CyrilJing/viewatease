@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>觀自在---人體修護學~禪經氣功。</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+	<![endif]-->
+	<link rel="stylesheet" href="http://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+<div id="navbar" class="navbar-fixed">
+
+	<nav>
+	  <div class="nav-wrapper white">
+			<a href="index.php" class="center brand-logo">
+				<b><span class="cyan-text text-darken-4">觀自在</span></b>
+				<small><span class="blue-grey-text text-darken-3">人體修護學~禪經氣功。</span></small>
+			</a>
+	  </div>
+	</nav>
+</div>
+<div class="parallax-container">
+  <div class="parallax"><img class="responsive-img" src="images/20170125_201254.jpg"></div>
+</div>
+<div class="section green darken-3 white-text">
+  <div class="row container">
+    <h3 class="header">禪經氣功的宗旨</h3>
+    <p>
+			將生活簡單化，把無做，鬆坦，適意溶入生活中，將心態處於，不計較，不比較，好睡覺。<br />
+			生活是感恩，經歷，學習，懺悔，創造加修行。<br />
+			接受它，感受它，享受它，用心學習，平心靜氣。<br />
+			每一個呼吸都是生命的延續，每個動作都是健康的來源，動中練靜，靜中練定。<br />
+			修身養命，修心養性。<br />
+			難捨，能捨，得心安，得理德，能練，難練真功夫。<br />
+			夫復無求品自在，深到無處方為無，人到無求觀自在。<br />
+		</p>
+  </div>
+</div>
+
+<div class="parallax-container">
+	<div class="parallax"><img class="responsive-img" src="images/20161119_074553.jpg"></div>
+</div>
+
+
+<footer class="page-footer grey darken-4">
+ <div class="container">
+	 <div class="row">
+		 <div class="col l4 s12 m12">
+			 <h5 class="white-text">
+				 <i class="material-icons">contact_phone</i>
+				 聯絡我們
+			 </h5>
+			 <p class="grey-text text-lighten-4">
+				 何老師。劉師姐。<br />
+				 連線電話:08-8849658<br />
+				 行動:0963-122949<br /><br />
+				 <a class="btn-floating waves-effect waves-teal transparent" href="javascript:void();">
+				 	<i class="fa fa-facebook-square" style="font-size:36px"></i>
+				 </a>
+			 </p>
+		 </div>
+		 <div class="col l8 s12 m12">
+		 	<span class="white-text">
+				<i class="material-icons">room</i>
+				台灣省屏東縣泰武鄉良武巷150號。&nbsp;&nbsp;&nbsp;需入園参訪時，請預約。
+				<div id="googleMap" style="max-width:100%;height:400px"></div>
+			</span>
+ 		</div>
+	 </div>
+ </div>
+ <div class="footer-copyright">
+	 <div class="container">
+	 &nbsp;
+	 </div>
+ </div>
+</footer>
+
+
+
+<script
+	src="https://code.jquery.com/jquery-3.1.1.min.js"
+	integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+
+<script>
+$(document).ready(function(){
+
+	$('.parallax').parallax();
+	$(".button-collapse").sideNav();
+//	$(".dropdown-button").dropdown();
+/*	var logOffset = 0, navShow = true;
+	$(window).scroll(function(){
+		var currentOffset = $(this).scrollTop();
+		if(currentOffset > logOffset && navShow === true){
+			$("#navbar").slideUp();
+			navShow = false;
+			console.log(currentOffset,logOffset,navShow);
+		}else if(currentOffset > logOffset && navShow === false)
+		{
+			$("#navbar").slideDown();
+			navShow = true;
+		}
+		logOffset = currentOffset;
+
+
+	});
+/*
+	function myMap() {
+	var mapProp= {
+	    center:new google.maps.LatLng(51.508742,-0.120850),
+	    zoom:5,
+	};
+	var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}*/
+});
+</script>
+
+<!-- GOOGLE MAP -->
+<script>
+function gMap() {
+	var mapOption = {
+		center:new google.maps.LatLng(22.5951304,120.6850743),
+		zoom:16,
+		mapTypeId: google.maps.MapTypeId.HYBRID
+	};
+	var mapElement = document.getElementById("googleMap");
+	var map = new google.maps.Map(mapElement, mapOption);
+	var marker = new google.maps.Marker({
+		position:mapOption.center,
+		animation:google.maps.Animation.BOUNCE
+	});
+	marker.setMap(map);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCsYE_DurkVLCHjz9Ks-ZDNR4raRR2zVZs&callback=gMap"></script>
+<!-- GOOGLE MAP -->
+
+</body>
+
+</html>
