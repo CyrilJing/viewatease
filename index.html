@@ -14,7 +14,6 @@
 
 <body>
 <div id="navbar" class="navbar-fixed">
-
 	<nav>
 	  <div class="nav-wrapper white">
 			<a href="index.html" class="center brand-logo">
@@ -24,9 +23,11 @@
 	  </div>
 	</nav>
 </div>
+
 <div class="parallax-container">
-  <div class="parallax"><img class="responsive-img" src="images/20170125_201254.jpg"></div>
+	<div class="parallax"><img id="settingimg1" class="responsive-img"></div>
 </div>
+
 <div class="section green darken-3 white-text">
   <div class="row container">
     <h3 class="header">禪經氣功的宗旨</h3>
@@ -43,9 +44,8 @@
 </div>
 
 <div class="parallax-container">
-	<div class="parallax"><img class="responsive-img" src="images/20161119_074553.jpg"></div>
+	<div class="parallax"><img id="settingimg2" class="responsive-img"></div>
 </div>
-
 
 <footer class="page-footer grey darken-4">
  <div class="container">
@@ -80,8 +80,6 @@
  </div>
 </footer>
 
-
-
 <script
 	src="https://code.jquery.com/jquery-3.1.1.min.js"
 	integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
@@ -90,34 +88,15 @@
 
 <script>
 $(document).ready(function(){
-
+	if($(this).width() > 420){
+		$("#settingimg1").attr("src", "images/settingimg1_max.jpg");
+		$("#settingimg2").attr("src", "images/settingimg2_max.jpg");
+	}	else{
+		$("#settingimg1").attr("src", "images/settingimg1_min.jpg");
+		$("#settingimg2").attr("src", "images/settingimg2_min.jpg");
+	}
 	$('.parallax').parallax();
 	$(".button-collapse").sideNav();
-//	$(".dropdown-button").dropdown();
-/*	var logOffset = 0, navShow = true;
-	$(window).scroll(function(){
-		var currentOffset = $(this).scrollTop();
-		if(currentOffset > logOffset && navShow === true){
-			$("#navbar").slideUp();
-			navShow = false;
-			console.log(currentOffset,logOffset,navShow);
-		}else if(currentOffset > logOffset && navShow === false)
-		{
-			$("#navbar").slideDown();
-			navShow = true;
-		}
-		logOffset = currentOffset;
-
-
-	});
-/*
-	function myMap() {
-	var mapProp= {
-	    center:new google.maps.LatLng(51.508742,-0.120850),
-	    zoom:5,
-	};
-	var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-}*/
 });
 </script>
 
